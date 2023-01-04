@@ -28,8 +28,8 @@ type Insumo struct {
 func (i *Insumo) formatar() {
 	i.Nome = strings.TrimSpace(strings.ToUpper(i.Nome))
 	i.PrecoUnitarioDecimal = decimal.NewFromFloat(i.PrecoUnitarioFloat)
-	i.Tipo = strings.TrimSpace(strings.ToUpper((i.Tipo)))
-	i.Unidade = strings.TrimSpace(strings.ToUpper((i.Unidade)))
+	i.Tipo = strings.TrimSpace(strings.ToLower((i.Tipo)))
+	i.Unidade = strings.TrimSpace(strings.ToLower((i.Unidade)))
 }
 
 func (i *Insumo) Validar() error {
